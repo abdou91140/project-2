@@ -1,14 +1,15 @@
-const { Schema, model } = require("mongoose");
-const menberSchema = require("Member.model.js");
-const projectSchema = new Schema({
-  members: [menberSchema],
+const mongoose = require("mongoose");
+
+const projectSchema = new mongoose.Schema({
+  members: [{ type: mongoose.Schema.Types.ObjectId, ref: "Member" }],
   description: { type: String },
   type: { enum: ["Social", "Health", "Sales", "Sports", "Culture", "Other"] },
-  technologies: { type: String },
+  frontEnd: [String],
+  backEnd: [String],
   link: { type: String },
   avatar: ["https://api.multiavatar.com/Starcrasher.png"],
 });
 
-const Project = model("Project", projectSchema);
+const Project = mongoose.model("Project", projectSchema);
 
 module.exports = Project;

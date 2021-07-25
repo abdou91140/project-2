@@ -2,34 +2,77 @@
 <hr />
 <form class="container" method="POST" action="/create-project">
   <div class="row">
-  <div class="form-group col">
-    <label for="project-title">Title</label>
-    <input
-      type="text"
-      class="form-control"
-      id="project-title"
-    />
-    <label for="project-type">Type</label>
-    <select class="form-control" id="project-type">
-      {{#each project.type}}
-      <option>{{this}}</option>
-      {{/each}}
-    </select>
+    <div class="form-group col">
+      <label for="project-title">Title</label>
+      <input type="text" class="form-control" id="project-title" name="title" />
+      <label for="project-type">Type</label>
+      <select class="form-control" id="project-type" name="type">
+        <option>Social</option>
+        <option>Healthcare</option>
+        <option>Sales</option>
+        <option>Sports</option>
+        <option>Culture</option>
+        <option>Education</option>
+        <option>Industry</option>
+        <option>Financials</option>
+        <option>Communication Services</option>
+        <option>Information Technology</option>
+      </select>
+      <label for="avatar">Image </label>
+      <input class="form-control" type="file" id="image" name="image" accept="image/png, image/jpeg" />
     </div>
     <div class="form-group col">
-    <label for="project-techno">Technologies</label>
-    <input  class="form-control" id="project-techno">
-    </input>
-
+      <label for="project-front">Frontend</label> 
+      <select class="form-control" id="project-front" name="frontEnd">
+        <option><a href="whatis_html.asp">HTML</a></option>
+        <option><a href="whatis_css.asp">CSS</a></option>
+        <option><a href="whatis_bootstrap.asp">Bootstrap</a></option>
+        <option><a href="whatis_w3css.asp">W3.CSS</a></option>
+        <option><a href="whatis_js.asp">JavaScript</a></option>
+        <option><a href="whatis_es5.asp">ES5</a></option>
+        <option><a href="whatis_htmldom.asp">HTML DOM</a></option>
+        <option><a href="whatis_json.asp">JSON</a></option>
+        <option><a href="whatis_xml.asp">XML</a></option>
+        <option><a href="/jquery/default.asp">jQuery</a></option><a href="/jquery/default.asp">
+        </a>
+        <option><a href="/jquery/default.asp"></a><a href="whatis_angularjs.asp">Angular</a></option>
+        <option><a href="whatis_react.asp">React</a></option>
+        <option>Backbone.js</option>
+        <option>Ember.js</option>
+        <option>Redux</option>
+        <option><a target="_blank" href="https://storybook.js.org/basics/quick-start-guide/">Storybook</a></option>
+        <option>GraphQL</option>
+        <option>Meteor.js</option>
+        <option>Grunt</option>
+        <option>Gulp</option>
+      </select>
+      <label for="project-back">Back</label> 
+      <select class="form-control" id="project-back" name="frontEnd">     Backend   <option><a href="/php/default.asp">PHP</a></option>
+        <option><a href="/asp/default.asp">ASP</a></option>
+        <option><a href="/cpp/default.asp">C++</a></option>
+        <option><a href="/cs/default.asp">C#</a></option>
+        <option><a href="/java/default.asp">Java</a></option>
+        <option><a href="/python/default.asp">Python</a></option>
+        <option><a href="/nodejs/default.asp">Node.js</a></option>
+        <option>Express.js</option>
+        <option>Ruby</option>
+        <option>REST</option>
+        <option>GO</option>
+        <option><a href="whatis_sql.asp">SQL</a></option>
+        <option><a href="/nodejs/nodejs_mongodb.asp">MongoDB</a></option>
+        <option>Firebase.com</option>
+        <option>Sass</option>
+        <option>Less</option>
+        <option>Parse.com</option>
+        <option>PaaS (Azure and Heroku)</option>
+      </select>
+    </div>
     <label for="project-description">Description</label>
-    <textarea
-      class="form-control"
-      id="project-description"
-      rows="3"
-    ></textarea>
-    <label for="avatar">Image of the project</label>
-    <input class="form-control" type="file"
-       id="avatar" name="avatar"
-       accept="image/png, image/jpeg"/></div>
+    <textarea class="form-control" id="project-description" rows="4"></textarea>
   </div>
+  </div>
+  <input class="form-control" id="project-link" name="link">
+  </input>
+  </div>
+  <div name="member"></div>
 </form>

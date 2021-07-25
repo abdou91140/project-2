@@ -5,7 +5,7 @@ const router = require("express").Router();
 //GET create the project
 router.get("/create-project", (req, res, next) => {
   projectModel
-    .create(re)
+    .create(req.body)
     .then((projectDocument) => {
       res.render("projects/formProject.hbs", { project: projectDocument });
     })
